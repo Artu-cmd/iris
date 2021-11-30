@@ -58,7 +58,8 @@
 </div>
 
 <script>
-{% comment %} 전송 정보를 가져옴 {% endcomment %}
+{% comment %} 전송 정보를 json형식으로 가져옴 {% endcomment %}
+{% comment %} $() jquery 인스턴스 생성과 사용을 함수 하나로 {% endcomment %}
     $(document).on('submit', '#post-form',function(e){
         e.preventDefault();
         $.ajax({

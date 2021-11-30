@@ -9,6 +9,7 @@
             <table class="table">
                 <thead>
                 <tr>
+                {% comment %} scope='col' : 읽는 방향 ∧ {% endcomment %}
                 <th scope="col">#</th>
                 <th scope="col">Sepal length</th>
                 <th scope="col">Sepal width</th>
@@ -20,6 +21,7 @@
                 <tbody>
                 {% for data in dataset %}
                     <tr>
+                    {% comment %} scope='col' : 읽는 방향 ∨ {% endcomment %}
                     <th scope="row">{{ data.id }}</th>
                     <td>{{ data.sepal_length }}</td>
                     <td>{{ data.sepal_width }}</td>

@@ -12,7 +12,7 @@ def predict_changes(request):
 
     if request.POST.get('action') == 'post':
 
-        # Receive data from client
+        # 클라에서 데이터 받음
         sepal_length = float(request.POST.get('sepal_length'))
         sepal_width = float(request.POST.get('sepal_width'))
         petal_length = float(request.POST.get('petal_length'))
@@ -34,6 +34,6 @@ def predict_changes(request):
 
 
 def view_results(request):
-    # Submit prediction and show all
+    # db
     data = {"dataset": PredResults.objects.all()}
     return render(request, "results.html", data)
